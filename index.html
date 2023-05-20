@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Project</title>
+
+     <!--jis folder me ho wo / file name-->
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* background: linear-gradient(#e66465, #9198e5); */
+            background-image: url('Images/training-828715_960_720.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            box-sizing: border-box;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+            font-family: 'Baloo Bhai 2', cursive;
+            background-position-y: -80px;
+        }
+        
+   /* Navbar ko upar fix karne ke liye */
+        /* .navbar {
+            background-color: #4752d973;
+            border: 2px solid green;
+            position: fixed;
+            z-index: 1;
+            height: 79px;
+            width: 100%;
+        } */
+
+        .nav {
+            margin: 10px;
+            display: inline;
+            height: 50px;
+            box-sizing: border-box;
+            position: absolute;
+            top: -4px;
+            height: 75px;
+        }
+
+        #left {
+            /* border: 2px solid blueviolet; */
+            width: 240px;
+            left: 4px;
+        }
+
+        #mid {
+            /* border: 2px solid green; */
+            width: 700px;
+            right: 328px;
+            top: -20px;
+        }
+
+        #right {
+            /* border: 2px solid red; */
+            width: 246px;
+            right: 43px;
+            top: -25px;
+        }
+
+        #logo {
+            height: 70px;
+            width: 84px;
+            border-radius: 40px;
+        }
+
+        .list {
+            text-decoration: none;
+            box-sizing: border-box;
+            display: inline;
+
+        }
+
+        li {
+            display: inline-block;
+            padding: 13px 10px;
+            margin: 0px 12px;
+            font-size: 20px;
+            position: relative;
+            left: 12px;
+            top: 16px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: beige;
+
+        }
+
+        .navbar li a:hover {
+            color: rgb(195 187 159);
+        }
+
+        .nav div {
+            position: absolute;
+            top: -3px;
+            left: 95px;
+            font-size: 28px;
+        }
+
+        #right img,
+        .location img {
+            display: inline;
+            height: 33px;
+            width: 40px;
+            margin: 0px;
+            padding: 2px;
+            position: relative;
+            left: 100px;
+            top: 36px;
+
+        }
+
+        .btn {
+            position: absolute;
+            top: 36px;
+            width: 92px;
+            height: 30px;
+            background-color: rgb(10, 8, 8);
+            color: white;
+            border-radius: 12px;
+            font-size: 13px;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(3, 3, 3);
+            /* text-decoration: underline; */
+            color: rgb(160 153 255 / 93%);
+            cursor: pointer;
+            border: 2px solid rgb(249 245 245);
+        }
+
+        .quote {
+            display: inline-block;
+            position: absolute;
+            /* border: 2px solid firebrick; */
+            width: 385px;
+            height: 451px;
+            top: 122px;
+            right: 47px;
+            font-size: 94px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        .location {
+            position: absolute;
+            /* border: 2px solid green; */
+            bottom: 10px;
+            left: 14px;
+        }
+
+        .location img {
+            top: 7px;
+            left: 6px;
+        }
+
+        .container {
+            /* border: 2px solid yellowgreen; */
+            margin: 20px;
+            padding: 10px;
+            height: 500px;
+            width: 730px;
+            position: absolute;
+            top: 96px;
+            left: 6px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+        .container button {
+            top: 445px;
+            left: 450px;
+            width: 146px;
+        }
+
+        .formg input {
+            margin: 9px;
+            padding: 9px;
+            text-align: center;
+            display: inline-block;
+            width: 480px;
+            /* border: 3px solid sienna; */
+            font-size: 17px;
+            border-radius: 25px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(234 114 255);
+            font-family: initial;
+            margin: 6px;
+            padding: 5px;
+            position: relative;
+            top: -3px;
+            left: -75px;
+        }
+
+        #age {
+            width: 48px;
+            /* border: 2px solid red; */
+        }
+
+        #a {
+            display: inline-block;
+            position: absolute;
+            top: 155px;
+            left: 588px;
+        }
+
+        #checkb {
+            position: absolute;
+            top: 392px;
+            cursor: pointer;
+        }
+
+        #resetb {
+            position: absolute;
+            top: 445px;
+            left: 10px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <h2>Fitness Gym</h2> -->
+    <header class="navbar">
+
+        <div id="left" class="nav">
+
+            <img id="logo" src="Images/logo.png" alt="Images/logo.png">
+            <div>
+                Fitness GYM
+            </div>
+        </div>
+
+        <div id="mid" class="nav">
+            <ul class="list">
+                <li><a class="active" href="#">Home</a> </li>
+                <li><a href="#">Fitness Centre</a> </li>
+                <li><a href="#">Facilities</a> </li>
+                <li><a href="#">Contact Us</a> </li>
+            </ul>
+
+        </div>
+
+        <div id="right" class="nav">
+            <button class="btn">
+                <strong>Call Us Now</strong>
+            </button>
+            <a target="_blank" href="https://whatsapp.com"><img src="Images/Logo-WhatsApp.png" alt=""></a>
+            <a target="_blank" href="https://instagram.com"><img src="Images/Logo_Insta.png" alt=""></a>
+            <a target="_blank" href="https://twitter.com"><img src="Images/twitter-icon-black-background-17.jpg"
+                    alt=""></a>
+            <a target="_blank" href="https://gmail.com"><img src="Images/112-gmail_email_mail-512.webp" alt=""></a>
+        </div>
+    </header>
+    <div class="quote">
+        Push Harder Than Yesterday
+    </div>
+    <div class="container">
+        <h1>JOIN US NOW!!</h1>
+        <form action="noaction.php">
+            <div class="formg" id="name">
+                Name: <input type="text" name="" placeholder="Enter your name">
+            </div>
+
+            <div clsss="formg" id="gender">
+                Gender: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="mygender">Male
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                    type="radio" name="mygender">Female
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                    type="radio" name="mygender">Other
+            </div>
+
+            <div class="formg">
+                DOB: <input type="date" name="">
+            </div>
+
+            <div id="a" class="formg">
+                Age: <input id="age" type="number" name="" placeholder="Age">
+            </div>
+
+            <div class="formg">
+                Mobile No. : <input type="number" name="" placeholder="Enter the Mobile No.">
+            </div>
+
+            <div class="formg">
+                Email Id: <input type="email" name="" placeholder="Enter the E-Mail Address">
+            </div>
+            <div class="formg">
+                Address: <input type="text" name="" placeholder="Enter you Locality">
+            </div>
+            <div class="formg">
+                Do you want Personal Trainer: <input id="checkb" type="checkbox" name="" checked>
+            </div>
+            <button id="resetb" class="btn" type="reset"><strong> Reset</strong></button>
+            <button type="submit" class="btn"><strong>Submit</strong> </button>
+
+        </form>
+    </div>
+    <footer class="location">
+        <img src="Images/e181b7cb6dec98c4d8efb94cfa77471c.jpg" alt=""> D-16,Bishanpura,Sector-62,Noida,Uttar Pradesh
+    </footer>
+</body>
+
+</html>
